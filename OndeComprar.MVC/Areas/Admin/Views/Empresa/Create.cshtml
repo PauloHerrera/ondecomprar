@@ -1,0 +1,47 @@
+﻿@using System.Web.Mvc.Html
+@model OndeComprar.MVC.Models.EmpresaViewModel
+
+@{
+    ViewBag.Title = "title";
+    Layout = "../Shared/_LayoutAdmin.cshtml";   
+}
+
+@section header
+{
+    <div class="content-header">
+        <div class="header-section">
+            <h1>
+                <i class="gi gi-notes_2"></i>Empresas<br><small>Adicione uma nova empresa.</small>
+            </h1>
+        </div>
+        
+    </div>
+    <ul class="breadcrumb breadcrumb-top">
+        <li>Empresas</li>
+        <li><a href="">Nova Empresa</a></li>
+        
+    </ul>
+}
+@Html.EditorForModel()
+
+@*
+    @Html.LabelFor(x => x.Nome)
+    @Html.TextBoxFor(x => x.Nome)
+    
+    @Html.LabelFor(x => x.Logradouro)
+    @Html.TextBoxFor(x => x.Logradouro)
+    
+    @Html.LabelFor(x => x.Site)
+    @Html.TextBoxFor(x => x.Site)
+
+    @Html.LabelFor(x => x.Logotipo)
+    @Html.TextBoxFor(x => x.Logotipo)
+    
+    @Html.LabelFor(x => x.TextoDestaque)
+    @Html.TextAreaFor(x => x.TextoDestaque)
+
+        
+    @Html.LabelFor(x => x.Descritivo)
+    @Html.TextAreaFor(x => x.Descritivo)    
+    <br><input type="submit" value="Cadastrar" >
+}*@

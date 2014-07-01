@@ -1,0 +1,171 @@
+﻿@model dynamic
+
+@{
+    Layout = "../Shared/_LayoutV2.cshtml";
+}
+
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+
+            $("#owl-demo").owlCarousel({
+                items: 3,
+                lazyLoad: true,
+                navigation: true
+            });
+            $("#pesquisateste").click(function () {
+                alert("asdsaadsds!");
+                $.ajax({
+                    type: "GET",
+                    url: "http://apihml.band.com.br/api/Programacao2T/GetDatas",
+                    dataType: "json",
+                    success: function (json) {
+                        alert(json);
+                    },
+                    error: function () {
+                        alert("erro!");
+                    }
+                });
+
+            });
+        });
+    </script>
+
+}
+
+@section header{
+    @Html.Partial("_HeaderPrincipal")
+}
+
+<div class="main-services">
+    <input type="button" value="Clicaaqui" id="pesquisateste">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="services">
+                    <div class="service-item">
+                        <i class="icon-store"></i>
+                        <div class="service-desc">
+                            <h4>Texto um sobre o site</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id ipsum varius, tincidunt odio nec, placerat enim.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- / .services -->
+            </div>
+            <div class="col-sm-4">
+                <div class="services">
+                    <div class="service-item">
+                        <i class="icon-tshirt"></i>
+                        <div class="service-desc">
+                            <h4>Texto 2</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id ipsum varius, tincidunt odio nec, placerat enim.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- / .services -->
+            </div>
+            <div class="col-sm-4">
+                <div class="services">
+                    <div class="service-item">
+                        <i class="icon-shades-sunglasses"></i>
+                        <div class="service-desc">
+                            <h4>Agente escolhe qualquer icone</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id ipsum varius, tincidunt odio nec, placerat enim.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- / .services -->
+            </div>
+        </div>
+    </div>
+    <!-- / .container -->
+</div>
+
+
+
+<div id="owl-demo" class="owl-carousel">
+    <div class="item">
+        <img class="lazyOwl" data-src="../../Public/Uploads/mcdonalds.png" alt="Lazy Owl Image"></div>
+    <div class="item">
+        <img class="lazyOwl" data-src="../../Public/Uploads/mcdonalds.png" alt="Lazy Owl Image"></div>
+    <div class="item">
+        <img class="lazyOwl" data-src="../../Public/Uploads/mcdonalds.png" alt="Lazy Owl Image"></div>
+    <div class="item">
+        <img class="lazyOwl" data-src="../../Public/Uploads/mcdonalds.png" alt="Lazy Owl Image"></div>
+    <div class="item">
+        <img class="lazyOwl" data-src="../../Public/Uploads/mcdonalds.png" alt="Lazy Owl Image"></div>
+    <div class="item">
+        <img class="lazyOwl" data-src="../../Public/Uploads/mcdonalds.png" alt="Lazy Owl Image"></div>
+    <div class="item">
+        <img class="lazyOwl" data-src="../../Public/Uploads/mcdonalds.png" alt="Lazy Owl Image"></div>
+    <div class="item">
+        <img class="lazyOwl" data-src="../../Public/Uploads/mcdonalds.png" alt="Lazy Owl Image"></div>
+    <div class="item">
+        <img class="lazyOwl" data-src="../../Public/Uploads/mcdonalds.png" alt="Lazy Owl Image"></div>
+    <div class="item">
+        <img class="lazyOwl" data-src="../../Public/Uploads/mcdonalds.png" alt="Lazy Owl Image"></div>
+    <div class="item">
+        <img class="lazyOwl" data-src="../../Public/Uploads/mcdonalds.png" alt="Lazy Owl Image"></div>
+    <div class="item">
+        <img class="lazyOwl" data-src="../../Public/Uploads/mcdonalds.png" alt="Lazy Owl Image"></div>
+    <div class="item">
+        <img class="lazyOwl" data-src="../../Public/Uploads/mcdonalds.png" alt="Lazy Owl Image"></div>
+    <div class="item">
+        <img class="lazyOwl" data-src="../../Public/Uploads/mcdonalds.png" alt="Lazy Owl Image"></div>
+</div>
+
+<div class="container">
+    <div class="">
+        <h3>Melhores lugares para ir hoje! </h3>
+        <div class="row">
+            <!--place-->
+            <div class="col-sm-6 col-md-3 places">
+                <div class="thumbnail">
+                    <img alt="..." src="/Public/Uploads/mcdonalds.png">
+                    <div class="caption">
+                        <a href="3.html">Mc Donalds</a>
+                        <p>Favoritos da Copa! Cada dia uma receita diferente. Experimente Todos!!!</p>
+                        <p>
+                            <img alt="..." src="/Public/Images/start.gif">
+                            <a class="btn btn-default btn-xs" href="3.html"><i class="icon-user"></i>87</a><a class="btn btn-default btn-xs" href="#"><i class="icon-commentround"></i>12</a><a class="btn btn-default btn-xs ping" href="#"><i class="icon-map-marker"></i></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--/place-->
+            <!--place-->
+            <div class="col-sm-6 col-md-3 places">
+                <div class="thumbnail">
+                    <img alt="..." src="/Public/Uploads/ilha.jpg">
+                    <div class="caption">
+                        <a href="3.html">A Ilha Night Club</a>
+                        <p>Venha passar momentos especiais em companhias maravilhosas num ambiente amplo e com total discrição.</p>
+                        <p>
+                            <img alt="..." src="/Public/Images/start.gif">
+                            <a class="btn btn-default btn-xs" href="3.html"><i class="icon-user"></i>87</a><a class="btn btn-default btn-xs" href="#"><i class="icon-commentround"></i>12</a><a class="btn btn-default btn-xs ping" href="#"><i class="icon-map-marker"></i></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--/place-->
+            <!--place-->
+            <div class="col-sm-6 col-md-3 places">
+                <div class="thumbnail">
+                    <img alt="..." src="/Public/Uploads/flashow.jpg">
+                    <div class="caption">
+                        <a href="3.html">Bar Flashow</a>
+                        <p>Aonde a maior torcida celebra junto as glórias do Mengão. Venha conhecer nosso ambiente próximo a prefeitura de São Vicente!</p>
+                        <p>
+                            <img alt="..." src="/Public/Images/start.gif">
+                            <a class="btn btn-default btn-xs" href="3.html"><i class="icon-user"></i>87</a><a class="btn btn-default btn-xs" href="#"><i class="icon-commentround"></i>12</a><a class="btn btn-default btn-xs ping" href="#"><i class="icon-map-marker"></i></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--/place-->
+
+        </div>
+    </div>
+</div>

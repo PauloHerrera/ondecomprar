@@ -1,0 +1,43 @@
+﻿@model OndeComprar.MVC.Models.EmpresaViewModel
+
+<div class="step ui-formwizard-content" id="first" style="display: block;">
+    <!-- Step Info -->
+    <div class="wizard-steps">
+        <div class="row">
+            <div class="col-xs-4 active">
+                <span>1. Acesso</span>
+            </div>
+            <div class="col-xs-4">
+                <span>2. Empresa</span>
+            </div>
+            <div class="col-xs-4">
+                <span>3. Extra</span>
+            </div>
+        </div>
+    </div>
+    <!-- END Step Info -->
+    <div class="form-group">
+        @Html.LabelFor(x => x.NomeDeUsuario, new Dictionary<string, object>{{"class","col-md-4 control-label"}})
+        <div class="col-md-6">
+            @Html.TextBoxFor(x => x.NomeDeUsuario, new Dictionary<string, object>{{"class","form-control ui-wizard-content"},{"placeholder", "nome de usuário"}})   
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.Email, new Dictionary<string, object>{{"class","col-md-4 control-label"}})
+        <div class="col-md-6">
+            @Html.TextBoxFor(x => x.Email, new Dictionary<string, object>{{"class","form-control ui-wizard-content"},{"placeholder", "test@example.com"}})   
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.Password, new Dictionary<string, object>{{"class","col-md-4 control-label"}})
+        <div class="col-md-6">
+            @Html.PasswordFor(x => x.Password, new Dictionary<string, object>{{"class","form-control ui-wizard-content"},{"placeholder", "escolha uma senha"}})               
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="example-password2" class="col-md-4 control-label">Digite novamente</label>
+        <div class="col-md-6">
+            <input type="password" placeholder="digite novamente" class="form-control ui-wizard-content" name="Password2" id="Password2">
+        </div>
+    </div>
+</div>

@@ -1,0 +1,58 @@
+﻿@using System.Drawing
+@using OndeComprar.MVC.Areas.Gerencial.Models
+@model List<OndeComprar.MVC.Areas.Gerencial.Models.ImagemViewModel>
+
+@{
+    Layout = "../Shared/_LayoutGerencial.cshtml";
+}
+
+@section header
+{
+    <div class="content-header">
+        <div class="header-section">
+            <h1>
+                <i class="gi gi-notes_2"></i>Imagens da Empresa<br><small>As imagens são uma forma do internauta conhecer um pouco mais da sua empresa.</small>
+            </h1>
+        </div>
+    </div>
+    <ul class="breadcrumb breadcrumb-top">
+        <li>Empresa</li>
+        <li><a href="">Imagens</a></li>
+    </ul>   
+}
+
+@section scripts
+{
+    <script type="text/javascript" src="../../../../Public/Scripts/Gerencial/geral.js"></script>
+}
+<div class="row">
+    <div class="col-md-6">
+        
+        <div class="block full">
+            <div class="block-title">
+                <h2>Adicione Imagens<small> - até 5 imagens</small></h2>
+            </div>
+            <form action="@Url.Action("SalvaImagem","MeusDados", new {id = 1})" class="dropzone" method="POST"></form>
+            
+        </div>
+    </div>
+    <div class="col-md-6">
+        <!-- Lightbox Gallery with Options Block -->
+        <div class="block">
+            <!-- Lightbox Gallery with Options Title -->
+            <div class="block-title">
+                <h2>Imagens de Destaque</h2>
+            </div>
+            <!-- END Lightbox Gallery with Options Title -->
+
+            <!-- Lightbox Gallery with Options Content -->
+            <div class="gallery" data-toggle="lightbox-gallery">
+                <div class="row" id="listaImagensDestaque">
+                    @Html.Partial("_ListaImagens", Model)
+                </div>
+            </div>
+            <!-- END Lightbox Gallery with Options Content -->
+        </div>
+        <!-- END Lightbox Gallery with Options Block -->
+    </div>
+</div>;

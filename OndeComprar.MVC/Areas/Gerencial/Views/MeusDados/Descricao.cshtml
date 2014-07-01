@@ -1,0 +1,42 @@
+﻿@model OndeComprar.MVC.Models.EmpresaViewModel
+
+@{
+    Layout = "../Shared/_LayoutGerencial.cshtml";
+}
+
+@section header
+{
+    <div class="content-header">
+        <div class="header-section">
+            <h1>
+                <i class="gi gi-notes_2"></i>Descrição da Empresa<br>
+                <small>O que  as pessoas precisam saber sobre sua empresa?</small>
+            </h1>
+        </div>
+    </div>
+    <ul class="breadcrumb breadcrumb-top">
+        <li>Empresas</li>
+        <li><a href="">Descrição</a></li>
+    </ul>
+}
+
+<div class="block">
+    <div class="block-title">
+        <h2>Descrição</h2>
+    </div>
+
+    <form action="page_forms_components.html" method="post" class="form-horizontal form-bordered" onsubmit="return false;">
+        <!-- Bootstrap WYSIWYG5 (class is initialized in js/app.js -> uiInit()) -->
+        <div class="form-group">
+            <div class="col-xs-12">
+                <textarea id="textarea-wysiwyg" name="textarea-wysiwyg" rows="10" class="form-control textarea-editor"></textarea>
+            </div>
+        </div>
+        <div class="form-group form-actions">
+            <div class="col-xs-12">
+                <button type="submit" class="btn btn-sm btn-primary">Confirmar</button>
+                <button type="reset" class="btn btn-sm btn-warning">Cancelar</button>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,176 @@
+﻿@model OndeComprar.MVC.Models.EmpresaViewModel
+
+@{
+    Layout = "../Shared/_LayoutV2.cshtml"; ;
+}
+@section header
+{
+    
+}
+
+<link rel="stylesheet" href="../../Public/Vendor/lightbox/css/lightbox.css">
+<link rel="stylesheet" href="../../Public/Vendor/owl-carousel/css/owl.carousel.css">
+
+@section scripts
+{
+    <script type="text/javascript" src="../../Public/Vendor/lightbox/js/lightbox.min.js"></script>
+    <script type="text/javascript" src="../../Public/Vendor/owl-carousel/js/owl.carousel.min.js"></script>
+    
+    <script type="text/javascript">
+
+
+        $(document).ready(function () {
+
+            $("#owl-demo").owlCarousel({
+
+                items: 4,
+                navigation: true               
+
+            });
+
+        });
+
+
+    </script>
+}
+
+<div class="main-services" style="margin-top: 40px">
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="portfolio-slideshow">
+                    <!-- Image Carousel -->
+                    <div data-ride="carousel" class="carousel slide" id="portfolio-slideshow">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li class="" data-slide-to="0" data-target="#portfolio-slideshow"></li>
+                            <li data-slide-to="1" data-target="#portfolio-slideshow" class="active"></li>
+                            <li data-slide-to="2" data-target="#portfolio-slideshow" class=""></li>
+                        </ol>
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+                            <div class="item">
+                                <img alt="..." class="img-responsive" src="../../Public/Uploads/locais/1/loja01.jpg">
+                            </div>
+                            <div class="item active">
+                                <img alt="..." class="img-responsive" src="../../Public/Uploads/locais/1/loja04.jpg">
+                            </div>
+                            <div class="item">
+                                <img alt="..." class="img-responsive" src="../../Public/Uploads/locais/1/loja03.jpg">
+                            </div>
+                            <div class="item">
+                                <img alt="..." class="img-responsive" src="../../Public/Uploads/locais/1/loja02.jpg">
+                            </div>
+                        </div>
+                        <!-- Controls -->
+                        <a data-slide="prev" href="#portfolio-slideshow" class="carousel-arrow carousel-arrow-prev">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                        <a data-slide="next" href="#portfolio-slideshow" class="carousel-arrow carousel-arrow-next">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <h3 class="headline second-child"><span>@Model.Nome</span></h3>
+                <p>@Model.TextoDestaque</p>
+                <br>
+                <h4 class="headline"><span>Informações Básicas</span></h4>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td>Classificação</td><td></td>
+                            <td>
+                                <ul class="rating list-inline">
+                                    <li><i class="icon-star"></i></li>
+                                    <li><i class="icon-star"></i></li> 
+                                    <li><i class="icon-star"></i></li>
+                                    <li><i class="icon-star"></i></li>
+                                    <li><i class="icon-star"></i></li>
+                                </ul>
+                                <span class="text-muted reviews">(12 reviews)</span> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Endereço</td><td></td>
+                            <td>@Model.Logradouro</td>
+                        </tr>
+                        <tr>
+                            <td>Site</td><td></td>
+                            <td><a href="@Model.Site" target="_blank">@Model.Site</a> </td>
+                        </tr>
+                        @if (!string.IsNullOrEmpty(Model.Facebook))
+                        {
+                            <tr>
+                                <td>Facebook</td><td></td>
+                                <td><a href="@Model.Facebook" target="_blank">@Model.Facebook</a> </td>
+                            </tr>
+                        }
+                        <tr>
+                            <td>Telefone(s)</td><td></td>
+                            <td>@Model.Telefone </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-sm-12">
+                <h3 class="headline"><span>Informação Detalhada</span></h3>
+                <p>
+                    @Model.Descritivo
+                </p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-sm-12">
+                <h3 class="headline"><span>Imagens</span></h3>
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div id="owl-demo">
+                    <a data-lightbox="products" href="../../Public/Uploads/locais/1/loja01.jpg">
+                        <img alt="..." class="img-responsive" src="../../Public/Uploads/locais/1/loja01.jpg" style="width:150px; height:150px"  alt="Owl Image">
+                    </a>
+                
+                    <a data-lightbox="products" href="../../Public/Uploads/locais/1/loja02.jpg">
+                        <img alt="..." class="img-responsive" src="../../Public/Uploads/locais/1/loja02.jpg" style="width:150px; height:150px"  alt="Owl Image">
+                    </a>
+                
+                    <a data-lightbox="products" href="../../Public/Uploads/locais/1/loja03.jpg">
+                        <img alt="..." class="img-responsive" src="../../Public/Uploads/locais/1/loja03.jpg" style="width:150px; height:150px"  alt="Owl Image">
+                    </a>
+                
+                    <a data-lightbox="products" href="../../Public/Uploads/locais/1/loja04.jpg">
+                        <img alt="..." class="img-responsive" src="../../Public/Uploads/locais/1/loja04.jpg" style="width:150px; height:150px"  alt="Owl Image" />
+                    </a>
+                
+                    <a data-lightbox="products" href="../../Public/Uploads/locais/1/loja05.jpg">
+                        <img alt="..." class="img-responsive" src="../../Public/Uploads/locais/1/loja05.jpg" style="width:150px; height:150px"  alt="Owl Image">
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+
+@*    <div id="owl-demo">
+    <div class="item"><img src="assets/owl1.jpg" alt="Owl Image"></div>
+    <div class="item"><img src="assets/owl2.jpg" alt="Owl Image"></div>
+    <div class="item"><img src="assets/owl3.jpg" alt="Owl Image"></div>
+    <div class="item"><img src="assets/owl4.jpg" alt="Owl Image"></div>
+    <div class="item"><img src="assets/owl5.jpg" alt="Owl Image"></div>
+    <div class="item"><img src="assets/owl6.jpg" alt="Owl Image"></div>
+    <div class="item"><img src="assets/owl7.jpg" alt="Owl Image"></div>
+    <div class="item"><img src="assets/owl8.jpg" alt="Owl Image"></div>
+     
+    </div>*@
+
+
+    </div>
+</div>

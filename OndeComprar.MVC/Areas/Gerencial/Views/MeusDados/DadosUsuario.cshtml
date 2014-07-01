@@ -1,0 +1,68 @@
+﻿@model OndeComprar.MVC.Models.EmpresaViewModel
+
+@{
+    Layout = "../Shared/_LayoutGerencial.cshtml";
+}
+
+@section header
+{
+    <div class="content-header">
+        <div class="header-section">
+            <h1>
+                <i class="gi gi-notes_2"></i>Empresa<br><small>Gerencie os dados de acesso ao sistema.</small>
+            </h1>
+        </div>
+    </div>
+    <ul class="breadcrumb breadcrumb-top">
+        <li>Empresa</li>
+        <li><a href="">Dados do Usuário</a></li>
+    </ul>   
+}
+
+<div class="row">
+    @using (Html.BeginForm())
+    {
+        @Html.HiddenFor(x => x.EmpresaId)
+        <div class="col-md-6">
+            <div class="block">
+                <div class="block-title">               
+                    <h2>Informações Básicas</h2>
+                </div>    
+                <div class="form-horizontal form-bordered">        
+                    <div class="form-group">
+                        
+                        @Html.LabelFor(x => x.NomeDeUsuario, new Dictionary<string, object>{{"class","col-md-3 control-label"}})
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(c => c.NomeDeUsuario, new Dictionary<string, object>() {{"class", "form-control"}, {"placeholder", "Nome do usuário"}})
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.Email, new Dictionary<string, object>{{"class","col-md-3 control-label"}})
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(c => c.Email, new Dictionary<string, object>() {{"type", "email"}, {"class", "form-control"}, {"placeholder", "Insira o email"}})
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.Password, new Dictionary<string, object>{{"class","col-md-3 control-label"}})
+                        <div class="col-md-9">
+                            @Html.PasswordFor(x => x.Password, new Dictionary<string, object>{{"class","form-control ui-wizard-content"},{"placeholder", "escolha uma senha"}})               
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="example-password2" class="col-md-3 control-label">Confime a Senha:</label>
+                        <div class="col-md-9">
+                            <input type="password" placeholder="digite novamente" class="form-control ui-wizard-content" name="Password2" id="Password2">
+                        </div>
+                    </div>
+                    <div class="form-group form-actions">
+                        <div class="col-md-8 col-md-offset-4">
+                            <input type="submit" value="Alterar" class="btn btn-sm btn-primary">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    }
+</div>

@@ -1,0 +1,72 @@
+﻿@model OndeComprar.MVC.Models.EmpresaViewModel
+
+@{
+    Layout = "../Shared/_LayoutGerencial.cshtml";
+}
+
+@section header
+{
+    <div class="content-header">
+        <div class="header-section">
+            <h1>
+                <i class="gi gi-notes_2"></i>Empresa<br><small>Gerencie as informações básicas da sua empresa.</small>
+            </h1>
+        </div>
+    </div>
+    <ul class="breadcrumb breadcrumb-top">
+        <li>Empresas</li>
+        <li><a href="">Dados da Empresa</a></li>
+    </ul>   
+}
+
+
+<div class="row">
+    @using (Html.BeginForm())
+    {
+        @Html.HiddenFor(x => x.EmpresaId)
+        <div class="col-md-6">
+            <div class="block">
+                <div class="block-title">               
+                    <h2>Informações Básicas</h2>
+                </div>    
+                <div class="form-horizontal form-bordered">        
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.Nome, new Dictionary<string, object>{{"class","col-md-3 control-label"}})
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(c => c.Nome, new Dictionary<string, object>() {{"class", "form-control"}, {"placeholder", "Nome do usuário"}})
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.Cnpj, new Dictionary<string, object>{{"class","col-md-3 control-label"}})
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(c => c.Cnpj, new Dictionary<string, object>() {{"class", "form-control"}, {"placeholder", "Nome do usuário"}})
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="block">
+                <div class="block-title">               
+                    <h2>Endereço</h2>
+                </div>    
+                <div class="form-horizontal form-bordered">        
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.Nome, new Dictionary<string, object>{{"class","col-md-3 control-label"}})
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(c => c.Nome, new Dictionary<string, object>() {{"class", "form-control"}, {"placeholder", "Nome do usuário"}})
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.Cnpj, new Dictionary<string, object>{{"class","col-md-3 control-label"}})
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(c => c.Cnpj, new Dictionary<string, object>() {{"class", "form-control"}, {"placeholder", "Nome do usuário"}})
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    }
+</div>

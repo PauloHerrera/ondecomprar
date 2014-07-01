@@ -1,0 +1,57 @@
+﻿@model OndeComprar.MVC.Models.EmpresaViewModel
+
+<div class="step ui-formwizard-content" id="third" style="display: none;">
+    <!-- Step Info -->
+    <div class="wizard-steps">
+        <div class="row">
+            <div class="col-xs-4 done">
+                <span><i class="fa fa-check"></i></span>
+            </div>
+            <div class="col-xs-4 done">
+                <span><i class="fa fa-check"></i></span>
+            </div>
+            <div class="col-xs-4 active">
+                <span>3. Extra</span>
+            </div>
+        </div>
+    </div>
+    <!-- END Step Info -->
+    
+    <div class="form-group">
+        @Html.LabelFor(x => x.Site, new Dictionary<string, object>{{"class","col-md-4 control-label"}})
+        <div class="col-md-6">
+            @Html.TextBoxFor(x => x.Site, new Dictionary<string, object>{{"class","form-control ui-wizard-content"},{"placeholder", "nome de usuário"}})   
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.Logradouro, new Dictionary<string, object>{{"class","col-md-4 control-label"}})
+        <div class="col-md-6">
+            @Html.TextBoxFor(x => x.Logradouro, new Dictionary<string, object>{{"class","form-control ui-wizard-content"},{"placeholder", "enredeço, numero"}})   
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.Complemento, new Dictionary<string, object>{{"class","col-md-4 control-label"}})
+        <div class="col-md-6">
+            @Html.TextBoxFor(x => x.Complemento, new Dictionary<string, object>{{"class","form-control ui-wizard-content"},{"placeholder", "nome de usuário"}})   
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.Bairro, new Dictionary<string, object>{{"class","col-md-4 control-label"}})
+        <div class="col-md-6">
+            @Html.TextBoxFor(x => x.Bairro, new Dictionary<string, object>{{"class","form-control ui-wizard-content"},{"placeholder", "nome de usuário"}})   
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.Cidade, new Dictionary<string, object>{{"class","col-md-4 control-label"}})
+        <div class="col-md-6">
+            @Html.TextBoxFor(x => x.Cidade, new Dictionary<string, object>{{"class","form-control ui-wizard-content"},{"placeholder", "nome de usuário"}})   
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.Nome, new Dictionary<string, object>{{"class","col-md-4 control-label"}})
+        <div class="col-md-6">
+            @Html.TextBoxFor(x => x.Nome, new Dictionary<string, object>{{"class","form-control ui-wizard-content"},{"placeholder", "nome de usuário"}})   
+        </div>
+    </div>
+
+</div>

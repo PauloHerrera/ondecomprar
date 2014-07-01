@@ -1,0 +1,112 @@
+﻿@model OndeComprar.MVC.Models.EmpresaViewModel
+
+<div class="row">
+    @using (Html.BeginForm())
+    {
+        @Html.HiddenFor(x => x.EmpresaId)
+        <div class="col-md-6">
+            <div class="block">
+                <div class="block-title">               
+                    <h2>Informações Básicas</h2>
+                </div>    
+                <div class="form-horizontal form-bordered">        
+                    <div class="form-group">
+                        <label for="example-text-input" class="col-md-3 control-label">Nome</label>
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(c => c.Nome, new Dictionary<string, object>() { { "class", "form-control" }, { "placeholder", "Nome da Loja" } })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="example-email-input" class="col-md-3 control-label">Email</label>
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(c => c.Email, new Dictionary<string, object>() { { "type", "email" }, { "class", "form-control" }, { "placeholder", "Insira o email" } })
+                            <span class="help-block">Por Favor, preencha seu email</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="example-password-input" class="col-md-3 control-label">Password</label>
+                        <div class="col-md-9">
+                            <input type="password" placeholder="Password" class="form-control" name="example-password-input" id="example-password-input">
+                            <span class="help-block">Please enter a complex password</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="example-textarea-input" class="col-md-3 control-label">Texto de Destaque</label>
+                        <div class="col-md-9">
+                            <textarea placeholder="Content.." class="form-control" rows="9" name="example-textarea-input" id="example-textarea-input"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="block">
+                <div class="block-title">               
+                    <h2>Dados Complementares</h2>
+                </div>       
+                <div class="form-horizontal form-bordered">
+                    <div class="form-group">
+                        <label for="example-text-input" class="col-md-3 control-label">Site</label>
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(c => c.Site, new Dictionary<string, object>() { { "class", "form-control" }, { "placeholder", "" } })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="example-text-input" class="col-md-3 control-label">Facebook</label>
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(c => c.Facebook, new Dictionary<string, object>() { { "class", "form-control" }, { "placeholder", "" } })
+                        </div>
+                    </div> 
+                    <div class="form-group">
+                        <label for="example-text-input" class="col-md-3 control-label">Twitter</label>
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(c => c.Twitter, new Dictionary<string, object>() { { "class", "form-control" }, { "placeholder", "" } })
+                        </div>
+                    </div>                
+                </div>               
+            </div>       
+            <div class="block">
+                <div class="block-title">               
+                    <h2>Endereço</h2>
+                </div>       
+                <div class="form-horizontal form-bordered">
+                    <div class="form-group">
+                        <label for="example-text-input" class="col-md-3 control-label">Logradouro</label>
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(c => c.Logradouro, new Dictionary<string, object>() { { "class", "form-control" }, { "placeholder", "" } })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="example-text-input" class="col-md-3 control-label">Complemento</label>
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(c => c.Complemento, new Dictionary<string, object>() { { "class", "form-control" }, { "placeholder", "Complemento" } })
+                        </div>
+                    </div>
+                     <div class="form-group">
+                        <label for="example-text-input" class="col-md-3 control-label">Bairro</label>
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(c => c.Bairro, new Dictionary<string, object>() { { "class", "form-control" }, { "placeholder", "Bairro" } })
+                        </div>
+                    </div>
+                     <div class="form-group">
+                        <label for="example-text-input" class="col-md-3 control-label">Cidade</label>
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(c => c.Cidade, new Dictionary<string, object>() { { "class", "form-control" }, { "placeholder", "Cidade" } })
+                        </div>
+                    </div>
+                     <div class="form-group">
+                        <label for="example-text-input" class="col-md-3 control-label">Estado</label>
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(c => c.Estado, new Dictionary<string, object>() { { "class", "form-control" }, { "placeholder", "Estado" } })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-9 col-md-offset-3">
+            <button class="btn btn-sm btn-primary" type="submit"><i class="fa fa-angle-right"></i> Cadastrar</button>
+            <button class="btn btn-sm btn-warning" type="reset"><i class="fa fa-repeat"></i> Reset</button>
+        </div>
+    }              
+</div>

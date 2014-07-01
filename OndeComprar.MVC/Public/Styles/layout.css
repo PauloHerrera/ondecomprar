@@ -1,0 +1,101 @@
+﻿body {
+    background-color: #F5F5F5;
+    color: #626262;
+}
+
+.span3 {
+    width: 25%;
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* HEADER PRINCIPAL */
+.header-container {
+    background-image: url("../Uploads/back/fundo05.jpg");
+    background-repeat:no-repeat;
+    background-position:top center;
+    height: 300px;
+    margin-top: 70px;
+}
+
+.search-principal {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    width: 300px;
+    height: auto;
+}
+/* HEADER PRINCIPAL - FIM */
+
+/* FOOTER */
+.footer-container {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-top: 8px solid #ED3E49;
+    font-weight: lighter;
+}
+
+.footer-container .f-details {
+    padding: 0 0 20px;
+}
+
+
+ul.footer_links { padding: 20px 0 0px 0; border-top: 1px solid #E5E5E5; height: 65px; }
+
+.footer-container.wide { width: 100%; }
+.footer-container.boxed { width: 990px; margin: 0 auto; }
+.footer-container .f-updates .container { padding-bottom: 18px; margin-bottom: 8px; }
+.footer-container .f-updates .about-us, .footer-container .f-updates .contact-us,  .footer-container .f-updates .twitter-box, .footer-container .f-updates .facebook{ margin-top: 30px; }
+.footer-container .f-details { padding: 0 0 20px; }
+.footer-container h2 { margin: 0 0 12px; }
+.footer-container .f-details li a { line-height: 18px; }
+.footer-container .f-details .blocks { min-height: 210px; margin-top: 30px; }
+.footer-container .f-details .blocks.last { border-right: 0px; }
+.footer-container .f-bottom { padding: 10px 0; }
+.footer-container .line { display: block; width: 36px; height: 1px; margin-bottom: 20px; }
+/* Contact Details */
+.footer-container .addresss, .footer-container .phone, .footer-container .fax, .footer-container .email, .footer-container .chat { padding: 4px 0 6px; min-height: 38px; clear: left; }
+.footer-container .addresss span, .footer-container .phone span, .footer-container .fax span, .footer-container .email span, .footer-container .chat span { display: inline-block; float: left; font-size: 16px; height: 38px; line-height: 38px; margin-right: 10px; text-align: center; width: 38px; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; }
+.footer-container .addresss:hover span, .footer-container .phone:hover span, .footer-container .fax:hover span, .footer-container .email:hover span, .footer-container .chat:hover span { color: #FE5252; }
+.footer-container .email a, .footer .chat a { padding: 0; }
+
+.footer-container, .subscribe small { color : #8A8989; }
+.footer-container h2 { color: #353535; }
+.footer-container .line { border-bottom: 1px solid #353535; }
+.footer-container a { color: #7B7B7B; }
+.footer-container a:hover { color: #f38c84; }
+.footer-container .f-details .blocks { border-right: 1px solid #E7E7E7; }
+.footer-container .f-updates .container { border-bottom: 1px solid #E7E7E7; }
+.footer-container .f-bottom { border-top: 1px solid #E7E7E7; background: #F9F9F9; }
+.footer-container .addresss span, .footer-container .phone span, .footer-container .fax span, .footer-container .email span, .footer-container .chat span { background: #E3E2E2; color: #353535; }
+.footer-container .addresss:hover span, .footer-container .phone:hover span, .footer-container .fax:hover span, .footer-container .email:hover span, .footer-container .chat:hover span { background: #f38c84; color: #ffffff; }
+.tweet_list li a { color: #f38c84 !important; }
+.social-block a { color: #353535; !important; }
+.social-block a:hover { color: #f38c84 !important; }
+.subscribe small { font-family: Arial, Helvetica, sans-serif; }
+.subscribe .news-ico { color: #f38c84; }
+.subscribe .form-control { background: #FFFFFF; border: 1px solid #E7E7E7; }
+.subscribe .button { color: #FFFFFF; background: #353535; }
+.subscribe .button:hover { color: #FFFFFF; background: #f38c84; }
+
+#back_top { background-color: #353535; }
+#back_top span { background-color: #f38c84; color: #ffffff; }
+
+.footer-container h2 {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.footer-container h2 {
+    color: #353535; /*#f38c84*/
+    margin: 0 0 12px;
+}
+
+.footer-container ul {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+
+/* FOOTER FIM*/

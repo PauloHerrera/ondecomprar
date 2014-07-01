@@ -1,0 +1,68 @@
+﻿@model OndeComprar.MVC.Models.EmpresaViewModel
+
+@{
+    Layout = "../Shared/_LayoutCadastro.cshtml"; ;
+}
+
+@section header
+{
+    <div class="content-header content-header-media">
+        <div class="header-section">
+            <div class="row">
+                <h1>
+                    <i class="fa fa-magic"></i>
+                    Faça parte!<br>
+                    <small>Cadastre sua loja, é rapidinho!</small>
+                </h1>
+            </div>
+        </div>
+    </div>
+}
+
+@section scripts
+{
+    <script type="text/javascript" src="../../Public/Scripts/Admin/formsWizard.js"></script>
+    <script>$(function () { FormsWizard.init(); });</script>
+}
+
+<div class="block">
+    <div class="block-title">
+        <h2><strong>NOVO</strong> CADASTRO</h2>
+    </div>
+
+    <!-- Progress Bar Wizard Content -->
+    <div class="row">
+        <div class="col-sm-4 col-sm-offset-1">
+            <div class="block-section">
+                <h3 class="sub-header text-center"><strong>Cadastre sua empresa!</strong></h3>
+                <p class="clearfix"><i class="fa fa-plus fa-5x text-primary pull-left"></i>
+                    Antes de qualquer coisa, vamos criar seu acesso ao sistema. 
+                        Insira um nome de usuário, um e-mail válido e uma senha. 
+                </p>
+                <p>
+                    <a class="btn btn-lg btn-primary btn-block" href="javascript:void(0)">Learn More.. <i class="fa fa-arrow-right"></i></a>
+                </p>
+            </div>
+        </div>
+        <div class="col-sm-6 col-sm-offset-1">
+                        <!-- Basic Wizard Content -->
+            <form class="form-horizontal form-bordered ui-formwizard" method="post" action="@Url.Action("Cadastrar","NovoCadastro")" id="basic-wizard">
+               
+                @Html.Partial("_passo01", Model)
+                @Html.Partial("_passo02", Model)
+                @Html.Partial("_passo03", Model)
+
+                <!-- Form Buttons -->
+                <div class="form-group form-actions">
+                    <div class="col-md-8 col-md-offset-4">
+                        <input type="reset" value="Anterior" id="back" class="btn btn-sm btn-warning ui-wizard-content ui-formwizard-button" disabled="disabled">
+                        <input type="submit" value="Próximo" id="next" class="btn btn-sm btn-primary ui-wizard-content ui-formwizard-button">
+                    </div>
+                </div>
+                <!-- END Form Buttons -->
+            </form>
+            <!-- END Basic Wizard Content -->
+        </div>
+    </div>
+    <!-- END Progress Bar Wizard Content -->
+</div>

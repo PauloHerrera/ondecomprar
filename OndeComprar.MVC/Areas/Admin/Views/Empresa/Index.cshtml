@@ -1,0 +1,61 @@
+﻿@model List<OndeComprar.MVC.Models.EmpresaViewModel>
+
+@{
+    ViewBag.Title = "title";
+    Layout = "../Shared/_LayoutAdmin.cshtml";   
+}
+
+@section header
+{
+    <div class="content-header">
+        <div class="header-section">
+            <h1>
+                <i class="gi gi-notes_2"></i>Empresas<br><small>Listagem das empresas cadastradas no sistema.</small>
+            </h1>
+        </div>
+    </div>
+    <ul class="breadcrumb breadcrumb-top">
+        <li>Empresas</li>
+        <li><a href="">Pesquisa</a></li>
+    </ul>   
+}
+
+<div class="table-responsive">
+    <table class="table table-vcenter table-striped">
+        <thead>
+            <tr>
+                <th class="text-center" style="width: 150px;"><i class="gi gi-user"></i></th>
+                <th>Client</th>
+                <th>Email</th>
+                <th>Subscription</th>
+                <th class="text-center" style="width: 150px;">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var empresa in Model)
+            {
+                <tr>
+                    <td class="text-center"><img class="img-circle" alt="avatar" src="img/placeholders/avatars/avatar11.jpg"></td>
+                    <td><a href="page_ready_user_profile.html">@empresa.Nome</a></td>
+                    <td>@empresa.Site</td>
+                    <td><a class="label label-warning" href="javascript:void(0)">Trial</a></td>
+                    <td class="text-center">
+                        <div class="btn-group btn-group-xs">
+                            <a class="btn btn-default" title="" data-toggle="tooltip" href="@Url.Action("Edit","Empresa", new {id = empresa.EmpresaId})" data-original-title="Edit"><i class="fa fa-pencil"></i></a>
+                            <a class="btn btn-danger" title="" data-toggle="tooltip" href="javascript:void(0)" data-original-title="Delete"><i class="fa fa-times"></i></a>
+                        </div>
+                    </td>
+                </tr>                
+            }
+    
+        </tbody>
+    </table>
+</div>
+
+@*<a href="@Url.Action("Create","Empresa")">Nova Empresa</a>
+
+@foreach(var empresa in Model)
+{
+    <p>@empresa.Nome - <a href="@Url.Action("Edit","Empresa", new {id = empresa.EmpresaId})">Editar</a> - <a href="@Url.Action("Delete","Empresa", new {id = empresa.EmpresaId})">Excluir</a></p>
+}*@
+
