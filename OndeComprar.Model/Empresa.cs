@@ -18,7 +18,8 @@ namespace OndeComprar.Model
         public string Facebook { get; set; }
         public string Logotipo { get; set; }
         
-        public string Email { get; set; }
+        public string EmailUsuario { get; set; }
+        public string EmailEmpresa { get; set; }
         public string NomeDeUsuario { get; set; }
         public string Password { get; set; }
        

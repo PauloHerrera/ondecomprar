@@ -1,3 +1,10 @@
+$(document).ready(function() {
+    $("#aproveitaEmail").click(function() {
+        $("#EmailEmpresa").val($(this).attr("data-value"));
+    });
+});
+
+
 function teste(nome, id) {
     $.ajax({
         type: "GET",
@@ -8,3 +15,4 @@ function teste(nome, id) {
         }
     });
 }
+

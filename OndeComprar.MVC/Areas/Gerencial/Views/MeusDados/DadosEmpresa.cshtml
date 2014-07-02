@@ -19,6 +19,10 @@
     </ul>   
 }
 
+@section scripts
+{
+    <script type="text/javascript" src="../../../../Public/Scripts/Gerencial/geral.js"></script>
+}
 
 <div class="row">
     @using (Html.BeginForm())
@@ -42,8 +46,49 @@
                             @Html.TextBoxFor(c => c.Cnpj, new Dictionary<string, object>() {{"class", "form-control"}, {"placeholder", "Nome do usuário"}})
                         </div>
                     </div>
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.EmailEmpresa, new Dictionary<string, object>{{"class","col-md-3 control-label"}})
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(c => c.EmailEmpresa, new Dictionary<string, object>() {{"class", "form-control"}, {"placeholder", "Email de contato"}})
+                            @if(!string.IsNullOrEmpty(Model.EmailUsuario))
+                            {
+                            @*    <span class="help-block">O email de acesso do usuário é @(Model.EmailUsuario). <br />Se desejar usá-lo, <a href="#" id="aproveitaEmail" data-value="@(Model.EmailUsuario)">clique aqui</a>. </span>*@
+                                <span class="help-block">Seu email de acesso é @(Model.EmailUsuario). <br />Se desejar usá-lo como email de contato, <a href="#" id="aproveitaEmail" data-value="@(Model.EmailUsuario)">clique aqui</a>. </span>
+                            }
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.Telefone, new Dictionary<string, object>{{"class","col-md-3 control-label"}})
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(c => c.Telefone, new Dictionary<string, object>() {{"class", "form-control"}, {"placeholder", "Nome do usuário"}})
+                        </div>
+                    </div>
                 </div>
-
+            </div>
+            <div class="block">
+                <div class="block-title">               
+                    <h2>Informações Complementares</h2>
+                </div>    
+                <div class="form-horizontal form-bordered">        
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.Site, new Dictionary<string, object>{{"class","col-md-3 control-label"}})
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(c => c.Site, new Dictionary<string, object>() {{"class", "form-control"}, {"placeholder", "Nome do usuário"}})
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.Facebook, new Dictionary<string, object>{{"class","col-md-3 control-label"}})
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(c => c.Facebook, new Dictionary<string, object>() {{"class", "form-control"}, {"placeholder", "Nome do usuário"}})
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.Twitter, new Dictionary<string, object>{{"class","col-md-3 control-label"}})
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(c => c.Twitter, new Dictionary<string, object>() {{"class", "form-control"}, {"placeholder", "Nome do usuário"}})
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="col-md-6">

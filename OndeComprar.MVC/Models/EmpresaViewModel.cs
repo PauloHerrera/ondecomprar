@@ -25,7 +25,10 @@ namespace OndeComprar.MVC.Models
         public string Twitter { get; set; }
 
         [DisplayName("Email:")]
-        public string Email { get; set; }
+        public string EmailUsuario { get; set; }
+
+        [DisplayName("Email da Empresa:")]
+        public string EmailEmpresa { get; set; }
 
         [DisplayName("Nome do Usuário:")]
         public string NomeDeUsuario { get; set; }
@@ -70,7 +73,8 @@ namespace OndeComprar.MVC.Models
                                     Estado = empresa.Estado,
                                     PontoDeReferencia = empresa.PontoDeReferencia,
                                     Telefone = empresa.Telefone1,
-                                    Email = empresa.Email,
+                                    EmailEmpresa = empresa.EmailEmpresa,
+                                    EmailUsuario = empresa.EmailUsuario,
                                     Twitter = empresa.Twitter,
                                     Bairro = empresa.Bairro,
                                     Cnpj = empresa.Cnpj
@@ -102,7 +106,8 @@ namespace OndeComprar.MVC.Models
                 Estado = empresa.Estado,
                 PontoDeReferencia = empresa.PontoDeReferencia,
                 Telefone1 = empresa.Telefone,
-                Email = empresa.Email,
+                EmailEmpresa = empresa.EmailEmpresa,
+                EmailUsuario = empresa.EmailUsuario,
                 Twitter = empresa.Twitter,
                 Bairro = empresa.Bairro,
                 Cnpj = empresa.Cnpj
