@@ -32,6 +32,7 @@ namespace OndeComprar.Model
         //Dados do endereço na mesma tabela, pois é fator chave na busca
         public string Logradouro { get; set; }
         public string Complemento { get; set; }
+        public string Cep { get; set; }
         public string Bairro { get; set; }
         public string Cidade { get; set; }
         public string Estado { get; set; }
@@ -39,7 +40,7 @@ namespace OndeComprar.Model
         public bool Ativo { get; set; }
 
         public bool CadastroAtivado { get; set; }
-
+       
         //Palavras Chave na mesma tabela, pois também é fator chave na busca
         public string PalavrasChave { get; set; }
 

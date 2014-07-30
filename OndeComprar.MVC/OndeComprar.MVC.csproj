@@ -210,7 +210,9 @@
     <Content Include="Public\Scripts\Admin\app.js" />
     <Content Include="Public\Scripts\Admin\formsWizard.js" />
     <Content Include="Public\Scripts\Admin\plugins.js" />
+    <Content Include="Public\Scripts\compMaps.js" />
     <Content Include="Public\Scripts\Gerencial\geral.js" />
+    <Content Include="Public\Vendor\gmaps.min.js" />
     <Content Include="Public\Scripts\less-1.7.0.min.js" />
     <Content Include="Public\Styles\Admin\bootstrap.min.css" />
     <Content Include="Public\Styles\Admin\fonts\fontawesome\fontawesome-webfont.svg" />
@@ -258,6 +260,7 @@
     <Content Include="Areas\Gerencial\Views\MeusDados\Imagens.cshtml" />
     <Content Include="Areas\Gerencial\Views\MeusDados\Estatisticas.cshtml" />
     <Content Include="Areas\Gerencial\Views\MeusDados\_ListaImagens.cshtml" />
+    <Content Include="Areas\Gerencial\Views\MeusDados\Localizacao.cshtml" />
     <None Include="Public\Styles\Default\variaveis_globais.less" />
     <Content Include="Public\Styles\style.css" />
     <Content Include="Public\Uploads\back\fundo03.jpg" />

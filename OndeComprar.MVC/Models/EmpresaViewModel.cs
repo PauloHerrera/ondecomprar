@@ -42,6 +42,7 @@ namespace OndeComprar.MVC.Models
         [DisplayName("Endereço:")]
         public string Logradouro { get; set; }
         public string Complemento { get; set; }
+        public string Cep { get; set; }
         public string Bairro { get; set; }
         public string Cidade { get; set; }
         public string Estado { get; set; }
@@ -71,6 +72,7 @@ namespace OndeComprar.MVC.Models
                                     Cidade = empresa.Cidade,
                                     Complemento = empresa.Complemento,
                                     Estado = empresa.Estado,
+                                    Cep = empresa.Cep,
                                     PontoDeReferencia = empresa.PontoDeReferencia,
                                     Telefone = empresa.Telefone1,
                                     EmailEmpresa = empresa.EmailEmpresa,
@@ -103,6 +105,7 @@ namespace OndeComprar.MVC.Models
                 TextoDestaque = empresa.TextoDestaque,
                 Cidade = empresa.Cidade,
                 Complemento = empresa.Complemento,
+                Cep = empresa.Cep,
                 Estado = empresa.Estado,
                 PontoDeReferencia = empresa.PontoDeReferencia,
                 Telefone1 = empresa.Telefone,
@@ -114,7 +117,6 @@ namespace OndeComprar.MVC.Models
             };
 
             return empresaVm;
-
         }
     }
 }

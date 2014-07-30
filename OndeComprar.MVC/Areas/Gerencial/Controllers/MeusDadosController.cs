@@ -60,6 +60,11 @@ namespace OndeComprar.MVC.Areas.Gerencial.Controllers
         {
             return View();
         }
+        
+        public ActionResult Localizacao()
+        {
+            return View();
+        }
 
         public ActionResult Imagens(long id)
         {
