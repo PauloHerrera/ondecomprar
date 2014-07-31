@@ -25,7 +25,10 @@ namespace OndeComprar.MVC.Models
         public string Twitter { get; set; }
 
         [DisplayName("Email:")]
-        public string Email { get; set; }
+        public string EmailUsuario { get; set; }
+
+        [DisplayName("Email da Empresa:")]
+        public string EmailEmpresa { get; set; }
 
         [DisplayName("Nome do Usuário:")]
         public string NomeDeUsuario { get; set; }
@@ -39,6 +42,7 @@ namespace OndeComprar.MVC.Models
         [DisplayName("Endereço:")]
         public string Logradouro { get; set; }
         public string Complemento { get; set; }
+        public string Cep { get; set; }
         public string Bairro { get; set; }
         public string Cidade { get; set; }
         public string Estado { get; set; }
@@ -68,9 +72,11 @@ namespace OndeComprar.MVC.Models
                                     Cidade = empresa.Cidade,
                                     Complemento = empresa.Complemento,
                                     Estado = empresa.Estado,
+                                    Cep = empresa.Cep,
                                     PontoDeReferencia = empresa.PontoDeReferencia,
                                     Telefone = empresa.Telefone1,
-                                    Email = empresa.Email,
+                                    EmailEmpresa = empresa.EmailEmpresa,
+                                    EmailUsuario = empresa.EmailUsuario,
                                     Twitter = empresa.Twitter,
                                     Bairro = empresa.Bairro,
                                     Cnpj = empresa.Cnpj
@@ -99,17 +105,18 @@ namespace OndeComprar.MVC.Models
                 TextoDestaque = empresa.TextoDestaque,
                 Cidade = empresa.Cidade,
                 Complemento = empresa.Complemento,
+                Cep = empresa.Cep,
                 Estado = empresa.Estado,
                 PontoDeReferencia = empresa.PontoDeReferencia,
                 Telefone1 = empresa.Telefone,
-                Email = empresa.Email,
+                EmailEmpresa = empresa.EmailEmpresa,
+                EmailUsuario = empresa.EmailUsuario,
                 Twitter = empresa.Twitter,
                 Bairro = empresa.Bairro,
                 Cnpj = empresa.Cnpj
             };
 
             return empresaVm;
-
         }
     }
 }

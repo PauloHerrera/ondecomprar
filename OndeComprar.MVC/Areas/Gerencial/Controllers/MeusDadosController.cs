@@ -38,11 +38,10 @@ namespace OndeComprar.MVC.Areas.Gerencial.Controllers
         [HttpPost]
         public ActionResult DadosUsuario(EmpresaViewModel empresaVm)
         {
-
             var empresa = _repositorio.Get(empresaVm.EmpresaId);
 
             empresa.NomeDeUsuario = empresaVm.NomeDeUsuario;
-            empresa.Email = empresaVm.Email;
+            empresa.EmailUsuario = empresaVm.EmailUsuario;
             empresa.Password = empresaVm.Password;
 
             _repositorio.Update(empresa);
@@ -52,15 +51,22 @@ namespace OndeComprar.MVC.Areas.Gerencial.Controllers
 
         public ActionResult DadosEmpresa()
         {
-            return View();
+            var empresa = EmpresaViewModel.EmpresaEntityToViewModel(_repositorio.Get(1));
+
+            return View(empresa);
         }
 
         public ActionResult Descricao()
         {
             return View();
         }
+        
+        public ActionResult Localizacao()
+        {
+            return View();
+        }
 
-        public ActionResult Imagens(long id )
+        public ActionResult Imagens(long id)
         {
             var viewModel = new List<ImagemViewModel>();
 

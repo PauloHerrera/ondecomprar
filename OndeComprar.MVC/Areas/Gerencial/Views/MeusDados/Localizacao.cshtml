@@ -1,0 +1,88 @@
+﻿@model OndeComprar.MVC.Models.EmpresaViewModel
+
+@{
+    Layout = "../Shared/_LayoutGerencial.cshtml";
+}
+
+@section header
+{
+    <div class="content-header">
+        <div class="header-section">
+            <h1>
+                <i class="gi gi-notes_2"></i>Empresa<br><small>Gerencie as informações básicas da sua empresa.</small>
+            </h1>
+        </div>
+    </div>
+    <ul class="breadcrumb breadcrumb-top">
+        <li>Empresas</li>
+        <li><a href="">Dados da Empresa</a></li>
+    </ul>   
+}
+
+@section scripts
+{
+    <script type="text/javascript" src="../../../../Public/Scripts/Gerencial/geral.js"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script type="text/javascript" src="../../../../Public/Vendor/gmaps.min.js"></script>
+    <script type="text/javascript" src="../../../../Public/Scripts/compMaps.js"></script>
+
+    <script>$(function () { CompMaps.init(); });</script>
+}
+
+<div class="row">
+    @using (Html.BeginForm())
+    {
+        @Html.HiddenFor(x => x.EmpresaId)
+        
+        <div class="col-md-6">
+            <div class="block">
+                <div class="block-title">               
+                    <h2>Endereço</h2>
+                </div>    
+                <div class="form-horizontal form-bordered">        
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.Cep, new Dictionary<string, object>{{"class","col-md-3 control-label"}})
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(c => c.Cep, new Dictionary<string, object>() {{"class", "form-control"}, {"placeholder", "Nome do usuário"}})
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.Logradouro, new Dictionary<string, object>{{"class","col-md-3 control-label"}})
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(c => c.Logradouro, new Dictionary<string, object>() {{"class", "form-control"}, {"placeholder", "Nome do usuário"}})
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.Complemento, new Dictionary<string, object>{{"class","col-md-3 control-label"}})
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(c => c.Complemento, new Dictionary<string, object>() {{"class", "form-control"}, {"placeholder", "Nome do usuário"}})
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.Bairro, new Dictionary<string, object>{{"class","col-md-3 control-label"}})
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(c => c.Bairro, new Dictionary<string, object>() {{"class", "form-control"}, {"placeholder", "Nome do usuário"}})
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <!-- Geolocation Block -->
+            <div class="block full">
+                <!-- Geolocation Title -->
+                <div class="block-title">
+                    <h2><strong>Geolocation</strong> Map</h2>
+                </div>
+                <!-- END Geolocation Title -->
+
+                <!-- Geolocation Content -->
+                <!-- Gmaps.js (initialized in js/pages/compMaps.js), for more examples you can check out http://hpneo.github.io/gmaps/examples.html -->
+                <div id="gmap-geolocation" class="gmap"></div>
+                <!-- END Geolocation Content -->
+            </div>
+            <!-- END Geolocation Block -->
+        </div>
+    }
+</div>
