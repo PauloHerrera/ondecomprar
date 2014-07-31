@@ -258,6 +258,7 @@
     <Content Include="Areas\Gerencial\Views\MeusDados\Imagens.cshtml" />
     <Content Include="Areas\Gerencial\Views\MeusDados\Estatisticas.cshtml" />
     <Content Include="Areas\Gerencial\Views\MeusDados\_ListaImagens.cshtml" />
+    <None Include="Properties\PublishProfiles\Publish OC.pubxml" />
     <None Include="Public\Styles\Default\variaveis_globais.less" />
     <Content Include="Public\Styles\style.css" />
     <Content Include="Public\Uploads\back\fundo03.jpg" />

@@ -22,3 +22,33 @@
                         
     </div>
 }
+
+@section scripts
+{
+    <script>
+        $("#pesquisateste").click(function() {
+            $.ajax({
+                type: "POST",
+                url: "http://localhost:54481/api/Favorito2T/PostFavoritoAvisarInicio",
+                data: $("#postTeste").serialize(),
+                success: function (json) {
+                    alert(json);
+                },
+                error: function () {
+                    alert("erro!");
+                }
+            });
+
+        });
+    </script>
+
+}
+
+<form id="postTeste" method="POST" >
+    <p>Dispositivo ID</p><input type="text" name="DispositivoId" id="DispositivoId"><br>
+    <p>Id item</p><input type="text" name="ItemId" id="ItemId"><br>
+    <p>Assinatura</p><input type="text" name="Sig" id="Sig"><br>
+    <p>Salt</p><input type="text" name="Salt" id="Salt"><br>
+    <input type="hidden" name="AvisarInicio" value="false" ><br>
+    <input type="button" id="pesquisateste" value="AVISAR">
+</form>

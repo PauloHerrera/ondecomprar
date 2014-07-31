@@ -14,21 +14,6 @@
                 lazyLoad: true,
                 navigation: true
             });
-            $("#pesquisateste").click(function () {
-                alert("asdsaadsds!");
-                $.ajax({
-                    type: "GET",
-                    url: "http://apihml.band.com.br/api/Programacao2T/GetDatas",
-                    dataType: "json",
-                    success: function (json) {
-                        alert(json);
-                    },
-                    error: function () {
-                        alert("erro!");
-                    }
-                });
-
-            });
         });
     </script>
 
@@ -39,7 +24,6 @@
 }
 
 <div class="main-services">
-    <input type="button" value="Clicaaqui" id="pesquisateste">
     <div class="container">
         <div class="row">
             <div class="col-sm-4">
